@@ -1,0 +1,9 @@
+{
+  "processed_order_id": "12345",
+  "customer_id": "CUST001",
+  "item": "Laptop",
+  "quantity": 1,
+  "processed_price": 1200.00,
+  "status": "processed",
+  "processed_timestamp": "2023-10-27T14:30:05Z"
+}

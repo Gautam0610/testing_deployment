@@ -1,0 +1,93 @@
+[
+  {
+    "env_name": "KAFKA_BOOTSTRAP_SERVERS",
+    "variable_type": "String",
+    "mandatory": true,
+    "about_variable": "Comma-separated list of Kafka bootstrap servers."
+  },
+  {
+    "env_name": "KAFKA_SECURITY_PROTOCOL",
+    "variable_type": "String",
+    "mandatory": true,
+    "default_value": "SASL_PLAINTEXT",
+    "about_variable": "Kafka security protocol (e.g., SASL_PLAINTEXT, SSL)."
+  },
+  {
+    "env_name": "KAFKA_SASL_MECHANISM",
+    "variable_type": "String",
+    "mandatory": true,
+    "default_value": "PLAIN",
+    "about_variable": "SASL authentication mechanism (e.g., PLAIN, SCRAM-SHA-256, SCRAM-SHA-512)."
+  },
+  {
+    "env_name": "KAFKA_SASL_USERNAME",
+    "variable_type": "String",
+    "mandatory": true,
+    "about_variable": "SASL username for Kafka authentication."
+  },
+  {
+    "env_name": "KAFKA_SASL_PASSWORD",
+    "variable_type": "Password",
+    "mandatory": true,
+    "about_variable": "SASL password for Kafka authentication."
+  },
+  {
+    "env_name": "KAFKA_INPUT_TOPIC",
+    "variable_type": "Input Topic",
+    "mandatory": true,
+    "about_variable": "Kafka topic to consume messages from."
+  },
+  {
+    "env_name": "KAFKA_OUTPUT_TOPIC",
+    "variable_type": "Output Topic",
+    "mandatory": true,
+    "about_variable": "Kafka topic to produce processed messages to."
+  },
+  {
+    "env_name": "KAFKA_DLQ_TOPIC",
+    "variable_type": "Output Topic",
+    "mandatory": true,
+    "about_variable": "Kafka Dead Letter Queue (DLQ) topic for failed messages."
+  },
+  {
+    "env_name": "KAFKA_CONSUMER_GROUP_ID",
+    "variable_type": "String",
+    "mandatory": true,
+    "about_variable": "Kafka consumer group ID."
+  },
+  {
+    "env_name": "KAFKA_RETRY_MAX_ATTEMPTS",
+    "variable_type": "Integer",
+    "mandatory": true,
+    "default_value": 5,
+    "about_variable": "Maximum number of retry attempts for transient Kafka errors."
+  },
+  {
+    "env_name": "KAFKA_RETRY_INITIAL_INTERVAL_SEC",
+    "variable_type": "Integer",
+    "mandatory": true,
+    "default_value": 1,
+    "about_variable": "Initial retry interval in seconds for exponential backoff."
+  },
+  {
+    "env_name": "KAFKA_CONSUMER_AUTO_OFFSET_RESET",
+    "variable_type": "String",
+    "mandatory": true,
+    "default_value": "earliest",
+    "about_variable": "What to do when there is no initial offset in Kafka or if the current offset does not exist any more on the server (e.g. because that data has been deleted)."
+  },
+  {
+    "env_name": "KAFKA_CONSUMER_ENABLE_AUTO_COMMIT",
+    "variable_type": "Boolean",
+    "mandatory": true,
+    "default_value": true,
+    "about_variable": "Automatically commit offsets to Kafka."
+  },
+  {
+    "env_name": "KAFKA_CONSUMER_AUTO_COMMIT_INTERVAL_MS",
+    "variable_type": "Integer",
+    "mandatory": true,
+    "default_value": 5000,
+    "about_variable": "The frequency in milliseconds that the consumer offsets are auto-committed to Kafka if enable.auto.commit is set to true."
+  }
+]
